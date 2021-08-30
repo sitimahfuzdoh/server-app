@@ -56,7 +56,7 @@ public class Employee {
 
     
     @Column(name = "address")
-    @Basic(optional = true) //boleh ga diisi
+    @Basic(optional = true) 
     private String address;
 
     //Many to One (department)

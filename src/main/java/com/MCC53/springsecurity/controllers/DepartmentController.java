@@ -40,7 +40,7 @@ public class DepartmentController {
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasAuthority ('CREATE_DATA')")
+    @PreAuthorize("hasAuthority ('READ_DATA')")
     public ResponseEntity<Department> getById(
             @PathVariable("id") Long id) {
         return new ResponseEntity(departmentService.getById(id), HttpStatus.OK);

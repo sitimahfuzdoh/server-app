@@ -48,18 +48,18 @@ AppUserDetailsService appUserDetailsService;
 //               .hasAnyRole("ADMIN", "EMPLOYEE")
 //             
                //appclientcoba
-               .antMatchers("/employee/**").permitAll()
+               .antMatchers("/**").permitAll()
 //               .antMatchers("/department/**").permitAll()
-               .antMatchers("/project/**").permitAll()
-               
-               .antMatchers("/login/**","/register/**","/email").permitAll()
+//               .antMatchers("/project/**").permitAll()
+//               .antMatchers("/image/**").permitAll()
+//               .antMatchers("/login/**","/register/**","/email").permitAll()
                .anyRequest()
                .authenticated()
                .and()
 //               .formLogin()
                .httpBasic();
     
-       http.cors();
+//       http.cors();
     }
 
 
